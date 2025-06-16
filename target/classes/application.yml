@@ -1,0 +1,25 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: dispatch-simulation
+  
+# Redisson配置（通过Java配置类管理，这里仅作备用）
+# redis:
+#   host: 127.0.0.1
+#   port: 6379
+#   database: 1
+
+# 日志配置
+logging:
+  level:
+    com.example.dispatch: INFO
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
+  
+# 定时任务配置（可选）
+task:
+  scheduling:
+    pool:
+      size: 2 
